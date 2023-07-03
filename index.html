@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CoR3lab</title>
+    <link rel="icon" href="image/coding.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="area">
+      <div class="main">
+        Coding<br>
+        OpenSource<br>
+        Robotic<br>
+        Education<br>
+        COR3LAB
+      </div>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      // Get the text field
+      var copyText = document.getElementById("dc").textContent;
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText);
+      document.getElementById("dc").textContent = "Copied!";
+      setTimeout(function () {
+        document.getElementById("dc").textContent = copyText;
+      }, 1000); //delay is in milliseconds
+    }
+    function showDiv() {
+      var div = document.getElementById("overlay");
+      div.style.display = "block";
+    }
+  </script>
+</html>

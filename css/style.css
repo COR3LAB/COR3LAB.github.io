@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Zen+Dots&display=swap");
+
+@keyframes up2down {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes left2right {
+  0% {
+    left: 0px;
+    opacity: 0;
+  }
+
+  50% {
+    left: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    left: var(--slide-up-y);
+    opacity: 1;
+  }
+}
+
+@keyframes down2up {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+
+  50% {
+    left: -100px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+body {
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: default;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.area {
+  animation-name: up2down;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  color: white;
+  margin: auto;
+  position: relative;
+  top: 50px;
+}
+
+.main{
+  font-family: 'Zen Dots', cursive;
+  width: auto;
+  text-align: center;
+  margin:0 auto;
+  display: block;
+  width: auto;
+  font-size: 50px
+}

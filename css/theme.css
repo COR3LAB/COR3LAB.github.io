@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Zen+Dots&family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+
+* {
+  box-sizing: border-box;
+  font-family: "cwTeXYen", monospace;
+}
+
+body {
+  /* background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; */
+  background-color: rgba(123, 123, 123, 1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: default;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  /* height: 100vh; */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.container {
+  scroll-snap-type: both mandatory;
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.mainInformation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  position: relative;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.avatar {
+  background-image: url(../image/background.jpg);
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.1s;
+  margin: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  border-radius: 30%;
+}
+
+.mainInfo {
+  position: relative;
+  padding: 20px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.nickname {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.skills {
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.skill {
+  background-color: #575b65;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 12px;
+  font-size: 20px;
+  /* animation-name: down2up;
+    animation-duration: 1s;
+    animation-iteration-count: 1 */
+  transition: transform 0.1s;
+}
+.skill:hover {
+  transform: scale(1.2);
+}
+
+.experience {
+  background-color: orange;
+  width: 90%;
+  border: 3px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 600px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.experience_show {
+  opacity: 1;
+}
+.title {
+  font-size: 25px;
+}
+
+.button {
+  background-color: #575b65;
+  border: none;
+  color: white;
+  padding-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  height: 80px;
+  animation-name: down2up;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transition: transform 0.1s;
+  font-size: 20px;
+  width: 120px;
+}
+.button:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  flex-direction: column;
+  /* width: 600px; */
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+}
+.three {
+  /* background: rgb(67, 91, 175); */
+  flex-direction: column;
+}
+.four {
+  /* background: rgb(214, 151, 15); */
+  flex-direction: column;
+}
+
+.timeline {
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 100px;
+  position: relative;
+  font-size: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 33%;
+    bottom: 0px;
+    width: 4px;
+    background: #ddd;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative;
+  opacity: 0;
+  transition: all 1s;
+  .entrytitle {
+    float: left;
+    width: 33%;
+    padding-right: 30px;
+    text-align: right;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 4px solid salmon;
+      background-color: #fff;
+      border-radius: 100%;
+      top: 25px;
+      right: -10px;
+      z-index: 99;
+    }
+  }
+  .entrybody {
+    float: right;
+    width: 66%;
+    padding-left: 20px;
+  }
+}
+
+.entry_show {
+  opacity: 1;
+}
